@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.dark{
+color: white;
+background: #1f1f1f
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.darkTextarea::placeholder{
+    color: white;
+}
+
+#root{
+    height: 100vh;
+}
+.modeSwitch{
+    display: flex;
+}
+.modeSwitch p{
+    margin-right: -8px;
 }
