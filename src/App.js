@@ -15,7 +15,7 @@ function App() {
       setMode("dark");
       document.body.style.background = "#000000e3";
       document.body.style.color = "white";
-    } else {
+    } else if(mode ==='dark') {
       setMode("light");
       document.body.style.background = "white";
       document.body.style.color = "black";
