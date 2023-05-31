@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 
 export default function TextForm(props) {
   const [text, setText] = useState("");
@@ -32,19 +32,7 @@ export default function TextForm(props) {
       alert("Failed to copy: " + err);
     }
   };
-  useEffect(() => {
-    placeholderColor();
-  }, [props.mode]);
-
-  const placeholderColor = () => {
-    if (props.mode === "dark") {
-      document.getElementById("textArea").className =
-        "form-control darkTextarea";
-    } else {
-      document.getElementById("textArea").className = "form-control";
-    }
-  };
-
+  
   return (
     <div>
       <div
@@ -59,7 +47,7 @@ export default function TextForm(props) {
               color: props.mode === "dark" ? "white" : "black"
             }}
             placeholder="Enter text here"
-            className="form-control"
+            className={`form-control ${props.mode=== 'dark' ? 'darkTextArea' : ''}`}
             onChange={handleOnChange}
             value={text}
             id="textArea"

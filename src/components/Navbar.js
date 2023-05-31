@@ -12,9 +12,9 @@ export default function Navbar(props) {
           data-bs-theme={props.mode}
         >
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="#">
               {props.title}
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -42,9 +42,9 @@ export default function Navbar(props) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <div className="modeSwitch">
